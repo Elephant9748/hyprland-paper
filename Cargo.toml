@@ -1,0 +1,8 @@
+[package]
+name = "hyprland-paper"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+hyprland = { git = "https://github.com/hyprland-community/hyprland-rs", branch = "master" }
