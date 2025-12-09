@@ -61,13 +61,15 @@ fn writeconfig_hyprpaper(wallpaper: &str) -> Result<()> {
 
 // restart hyprpaper in hyprctl
 fn restart_hyprpaper() {
-    let _ = Command::new("killall")
+    let mut kill_hyprpaper = Command::new("killall")
         .args(["hyprpaper"])
         .stdout(Stdio::piped())
         .spawn()
-        .expect("Thread failed No bash found.")
-        .try_wait()
-        .expect("--> Failed to wait clear_clipboard()");
+        .expect("Thread failed No bash found.");
+
+    let _ = kill_hyprpaper
+        .wait()
+        .expect(">> failed to wait on kill_hyprpaper");
 
     let _ = dispatch!(Exec, "hyprpaper");
 }
