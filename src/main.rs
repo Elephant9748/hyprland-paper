@@ -90,7 +90,7 @@ fn hyprland_paper_stats() -> Result<()> {
     for (key, value) in w_wallpaper {
         if key == w_active.id {
             println!("{key} | {value}");
-            let change_wallpaper = "       path = ".to_owned() + value;
+            let change_wallpaper = "        path = ".to_owned() + value;
             let _ = writeconfig_hyprpaper(&change_wallpaper);
             restart_hyprpaper();
         }
