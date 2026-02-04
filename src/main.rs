@@ -45,7 +45,7 @@ fn writeconfig_hyprpaper(wallpaper: &str) -> Result<()> {
 
         //set wallpaper then write as config file
         //buf[8] todo()
-        let _ = std::mem::replace(&mut buf[7], wallpaper);
+        let _ = std::mem::replace(&mut buf[9], wallpaper);
 
         let buffers = buf.join("\n");
         let w_paper = File::create(path).expect(">> hyprpaper config file not found");
