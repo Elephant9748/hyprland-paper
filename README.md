@@ -14,25 +14,22 @@ exec-once = ~/hyprland-paper/target/release/hyprland-paper &
 ## Step3 config hyprpaper.conf
 > !Here only use ii-vii, workspace 1,2 = ii.png
 ```
-# preload = ~/Pictures/wallhaven.cc/i.png
 preload = ~/Pictures/wallhaven.cc/ii.png
 preload = ~/Pictures/wallhaven.cc/iii.png
 preload = ~/Pictures/wallhaven.cc/iv.png
 preload = ~/Pictures/wallhaven.cc/v.png
 preload = ~/Pictures/wallhaven.cc/vi.png
 preload = ~/Pictures/wallhaven.cc/vii.png
-wallpaper = HDMI-A-1, ~/Pictures/wallhaven.cc/ii.png
-wallpaper = eDP-1, ~/Pictures/wallhaven.cc/ii.png
-# wallpaper { 
-#         monitor = HDMI-A-1 
-#         path = /home/rigel/Pictures/wallhaven.cc/ii.png
-#         fit_mode = cover
-# }
-# wallpaper { 
-#         monitor = eDP-1 
-#         path = ~/Pictures/wallhaven.cc/ii.png 
-#         fit_mode = cover
-# } 
+ wallpaper { 
+         monitor = HDMI-A-1 
+         path = /home/rigel/Pictures/wallhaven.cc/ii.png # <- this line change everytime
+         fit_mode = cover
+ }
+ wallpaper { 
+         monitor = eDP-1 
+         path = ~/Pictures/wallhaven.cc/ii.png # <- this line change everytime
+         fit_mode = cover
+ } 
 splash = false
 ipc = true #off safe battery life
 
