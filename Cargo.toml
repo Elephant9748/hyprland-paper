@@ -6,3 +6,11 @@ edition = "2024"
 [dependencies]
 anyhow = "1.0.100"
 hyprland = { git = "https://github.com/hyprland-community/hyprland-rs", branch = "master" }
+
+[profile.release-small]
+inherits = "release"
+strip = "debuginfo"
+opt-level = 's'
+lto = true
+codegen-units = 1
+
